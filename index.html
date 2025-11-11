@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="SplatSearch">
+  <meta name="keywords" content="Mobile Robot Navigation, 3D Gaussian Splatting, Diffusion Models, Instance Image Goal Navigation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SplatSearch: Instance Image Goal Navigation for Mobile Robots using 3D Gaussian Splatting and Diffusion Models</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+
+  <meta property="og:site_name" content="SplatSearch" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SplatSearch: Instance Image Goal Navigation for Mobile Robots using 3D Gaussian Splatting and Diffusion Models" />
+  <meta property="og:description" content="Anonymous Research Submission" />
+  <meta property="og:url" content="https://anonymous-splatsearch.github.io/" />
+  <meta property="article:publisher" content="#" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="SplatSearch: Instance Image Goal Navigation for Mobile Robots using 3D Gaussian Splatting and Diffusion Models" />
+  <meta name="twitter:description" content="Anonymous Research Submission" />
+  <meta name="twitter:url" content="https://anonymous-splatsearch.github.io/" />
+  <meta name="twitter:site" content="@anonymous" />
+</head>
+
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths has-text-centered">
+          <h1 class="title is-1 publication-title">SplatSearch: Instance Image Goal Navigation for Mobile Robots using 3D Gaussian Splatting and Diffusion Models</h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://quest2gm.github.io/">Siddarth Narasimhan</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://mattlisondra.com/">Matthew Lisondra</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=LA6TYrgAAAAJ&hl=en">Haitong Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=1pCgjH0AAAAJ&hl=en">Goldie Nejat</a>
+            </span>
+          </div>
+          <div class="is-size-4 publication-authors">
+            <a href="http://asblab.mie.utoronto.ca/">Autonomous Systems and Biomechatronics Lab</a>
+          </div>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">University of Toronto</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- arXiv Link -->
+              <span class="link-block" style="margin-right: 15px;">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link -->
+              <span class="link-block" style="margin-right: 15px;">
+                <a href="https://youtu.be/vgkZqu9gLpA?si=N8n-OwlhugrxnyZC" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background-color: #f8f9fa; padding: 40px 0;">
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The Instance Image Goal Navigation (IIN) problem requires mobile robots deployed in unknown environments to search for specific objects or people of interest using only a single reference goal image of the target. This problem can be especially challenging when: 1) the reference image is captured from an arbitrary viewpoint, and 2) the robot must operate with sparse-view scene reconstructions. In this paper, we address the IIN problem, by introducing SplatSearch, a novel architecture that leverages sparse-view 3D Gaussian Splatting (3DGS) reconstructions. SplatSearch renders multiple viewpoints around candidate objects using a sparse online 3DGS map, and uses a multi-view diffusion model to complete missing regions of the rendered images, enabling robust feature matching against the goal image. A novel frontier exploration policy is introduced which uses visual context from the synthesized viewpoints with semantic context from the goal image to evaluate frontier locations, allowing the robot to prioritize frontiers that are semantically and visually relevant to the goal image. Extensive experiments in photorealistic home and real-world environments validate the higher performance of SplatSearch against current state-of-the-art methods in terms of Success Rate and Success Path Length. An ablation study confirms the design choices of SplatSearch.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <h2 class="title is-2" style="text-align: center;">Experiment Video</h2>
+        <div style="position: relative; width: 100%; max-width: 1100px; margin: 0 auto;">
+          <iframe width="100%" height="619" src="https://www.youtube.com/embed/vgkZqu9gLpA?si=0YNrSGJhtuh3JBIV" title="Experiment Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <!-- Architecture Title and Description -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">SplatSearch Architecture</h2>
+        <div class="content has-text-justified">
+          <p>
+            The proposed SplatSearch architecture consists of six main modules, Fig. 1: 1) Map Generation Module (MGM), 2) Semantic Object Identification Module (SOIM), 3) Novel Viewpoint Synthesis Module (NVSM), 4) View-Consistent Image Completion Network (VCICN), 5) Feature Extraction Module (FEM), and 6) Exploration Planner (EP). Inputs are RGB-D observations with corresponding poses from the robot’s onboard camera and a single goal image. These are first processed by the MGM, which incrementally constructs a sparse-view 3DGS map and a value map. The RGB-D observations and the 3DGS map are used as inputs into the SOIM, which analyzes the current RGB frame to detect candidate objects of the same class as the goal image. Detected objects are segmented, assigned unique identifiers, and their 3D centroids are mapped into the 3DGS representation, producing a set of candidate object locations. These centroids are used by the NVSM to render multiple candidate views of each detected object from novel poses around the centroid using the 3DGS map. Since these renders are often incomplete due to sparse reconstructions, they are refined by the VCICN by inpainting missing regions to produce complete views. The completed renders are compared against the goal image by the FEM using feature matching, outputting visual context scores that represent the likelihood of a detected instance matching the goal object. The EP uses the visual context scores and semantic scores obtained from a pre-trained image encoder to select frontiers for navigation. If a goal object is recognized, the EP plans a direct navigation path to its location; otherwise, it selects the next frontier that maximizes semantic and feature matching scores.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Architecture Image -->
+    <div class="columns is-centered">
+      <div class="column is-full-width is-centered has-text-centered">
+        <img src="./static/images/architecture.png" alt="SplatSearch Architecture Diagram" style="width: 100%; max-width: 1100px; margin: 20px auto; display: block;">
+        <p style="margin-top: 11px; color: #666;">Fig 1. SplatSearch Architecture</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Page template from <a href="https://robot-parkour.github.io/"><span class="dnerf">Robot Parkour Learning</span></a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
